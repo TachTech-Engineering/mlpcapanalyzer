@@ -233,7 +233,7 @@ For users who prefer to run directly on their host system:
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/mlPcapAnalyzer.git
+git clone https://github.com/TachTech-Engineering/mlpcapanalyzer.git
 cd mlPcapAnalyzer
 
 # Create virtual environment
