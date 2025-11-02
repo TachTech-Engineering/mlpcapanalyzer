@@ -196,13 +196,13 @@ chmod +x *.py
 
 ```bash
 # Test packet capture (generates scapy.pcap)
-python3 -c "from scapy.all import *; wrpcap('scapy.pcap', sniff(count=100))"
+sudo .venv/bin/python3 -c 'from scapy.all import *; wrpcap("test.pcap", sniff(count=100))'
 
 # Run automated analysis
-python3 mlpcapanalyzer.py
+.venv/bin/python3 mlpcapanalyzer.py
 
 # Launch interactive mode
-python3 quickstart_mlpcapanalyzer.py
+.venv/bin/python3 quickstart_mlpcapanalyzer.py
 ```
 
 #### Container Management Commands
@@ -256,7 +256,7 @@ python3 -c "from scapy.all import *; print('Scapy version:', scapy.__version__)"
 The quickstart module provides 6 hands-on learning modules for PCAP analysis fundamentals:
 
 ```bash
-sudo python3 quickstart_mlpcapanalyzer.py
+sudo .venv/bin/python3 quickstart_mlpcapanalyzer.py
 ```
 
 **Available Modules:**
@@ -307,7 +307,7 @@ For production security operations and automated threat hunting:
 
 ```bash
 # Analyze pre-captured PCAP
-python3 mlpcapanalyzer.py
+.venv/bin/python3 mlpcapanalyzer.py
 
 # The script expects "scapy.pcap" in the current directory
 # Generates: YYYY-MM-DD_HH-MM-SS_tachtech_scapy.md
@@ -337,19 +337,19 @@ UNENCRYPTED_PORTS = {
 ```bash
 # Analyze custom PCAP file
 sed -i 's/scapy.pcap/mytraffic.pcap/g' mlpcapanalyzer.py
-python3 mlpcapanalyzer.py
+.venv/bin/python3 mlpcapanalyzer.py
 
 # Batch analysis of multiple PCAPs
 for pcap in *.pcap; do
     sed -i "s/PCAP_FILE = .*/PCAP_FILE = \"$pcap\"/g" mlpcapanalyzer.py
-    python3 mlpcapanalyzer.py
+    .venv/bin/python3 mlpcapanalyzer.py
 done
 
 # Integration with tcpdump for live analysis
 sudo tcpdump -i eth0 -w live_capture.pcap -c 1000 &
 sleep 30
 sed -i 's/scapy.pcap/live_capture.pcap/g' mlpcapanalyzer.py
-python3 mlpcapanalyzer.py
+.venv/bin/python3 mlpcapanalyzer.py
 ```
 
 ---
@@ -766,15 +766,15 @@ We welcome contributions from the cybersecurity community! Here's how you can he
 
 ```bash
 # Fork repository and clone
-git clone https://github.com/yourusername/mlPcapAnalyzer.git
+git clone https://github.com/TachTech-Engineering/mlpcapanalyzer.git
 cd mlPcapAnalyzer
 
 # Create feature branch
 git checkout -b feature/new-detection-rule
 
 # Make changes and test
-python3 mlpcapanalyzer.py
-python3 quickstart_mlpcapanalyzer.py
+.venv/bin/python3 mlpcapanalyzer.py
+.venv/bin/python3 quickstart_mlpcapanalyzer.py
 
 # Commit with descriptive message
 git commit -am "Add LDAP cleartext detection (port 389)"
@@ -917,7 +917,7 @@ This toolkit is designed for **authorized security testing and educational purpo
 
 ---
 
-**Version**: 1.0.0  
+**Version**: 1.1.0  
 **Last Updated**: November 2025  
 **Maintained By**: Kyle Thompson, Solutions Architect @ TachTech
 
