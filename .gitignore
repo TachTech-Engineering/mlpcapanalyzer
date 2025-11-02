@@ -1,0 +1,34 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# PCAP files - exclude all except scapy.pcap
+*.pcap
+!scapy.pcap
+
+# Generated reports (timestamped .md files from mlpcapanalyzer.py)
+*_tachtech_scapy.md
+2[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]_*.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
