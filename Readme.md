@@ -8,7 +8,7 @@ A Python-based network packet analysis framework built on Scapy, designed for cy
 
 ## 🎯 Overview
 
-mlPcapAnalyzer is a comprehensive network traffic analysis toolkit developed by TachTech for enterprise security operations. The project includes:
+mlPcapAnalyzer is a very comprehensive network traffic analysis toolkit developed by TachTech for enterprise security operations. The project includes:
 
 - **Unencrypted Protocol Detection**: Identifies cleartext HTTP, FTP, Telnet, SMTP, DNS, POP3, and IMAP traffic
 - **Automated PCAP Analysis**: Generates detailed markdown reports with protocol statistics and IP conversation mapping
